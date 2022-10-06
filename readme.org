@@ -1,0 +1,14 @@
+* Some Stylesheets
+Find here a collection of stylesheets I use.
+** ~org.css~
+Stylesheet for html generated from org-mode.
+Preferably use these org options:
+#+begin_src org
+#+options: toc:nil num:nil \n:t html-style:nil html5-fancy:t
+#+html_doctype: xhtml5
+#+html_head: <link rel="stylesheet" type="text/css" href="PATH_TO_CSS"/>
+#+end_src
+** ~apache.css~
+Stylesheet for apache index pages
+** ~links.css~
+Stylesheet for my link collection page
