@@ -1,0 +1,67 @@
+:root {
+    --primary: #5317ac;
+    --secondary: #f0f0ff;
+    --accent: #8f0075;
+    --bg: #fffffa;
+    --fg: #332;
+}
+
+@media screen and (prefers-color-scheme: dark){
+    :root {
+        --bg: black;
+        --fg: #fffff3;
+        --primary: #b6a0ff;
+        --secondary: #21008f;
+        --accent: #6ae4b9;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: medium;
+    line-height: 1.4;
+}
+
+body {
+    font-family: Fira Sans, sans-serif;
+    background-color: var(--bg);
+    color: var(--fg);
+    margin: 2rem auto 8rem;
+    padding: 0 2em;
+    width: auto;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    padding: 0.2em;
+}
+
+a:hover {
+    background: var(--secondary);
+    text-decoration: underline;
+}
+
+#contact {
+    display: grid;
+    grid-template-columns: 10ch 30ch;
+    grid-column-gap: 4ch;
+    margin-bottom: 2rem;
+    margin-left: 0;
+}
+
+#contact h1 {
+    text-align: left;
+    grid-column: 1 / 3;
+}
+
+#contact .fc {
+    text-align: right;
+}
+
+#contact a:hover {
+    background-color: inherit;
+}

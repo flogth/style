@@ -1,0 +1,109 @@
+:root {
+    --primary: #5317ac;
+    --secondary: #f0f0ff;
+    --accent: #8f0075;
+    --bg: #fffffa;
+    --fg: #332;
+}
+
+@media screen and (prefers-color-scheme: dark){
+    :root {
+        --bg: black;
+        --fg: #fffff3;
+        --primary: #b6a0ff;
+        --secondary: #21008f;
+        --accent: #6ae4b9;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: medium;
+    line-height: 1.4;
+}
+
+body {
+    font-family: Fira Sans, sans-serif;
+    background-color: var(--bg);
+    color: var(--fg);
+    margin: 2rem auto 8rem;
+    padding: 0 2em;
+    width: auto;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    padding: 0.2em;
+}
+
+a:hover {
+    background: var(--secondary);
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6, dt {
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 1em;
+}
+
+h2, dt {
+    display: flex;
+    flex: 1;
+}
+
+h2:before, dt:before, footer a:before {
+    content: '';
+    background: linear-gradient(90deg, var(--accent) 0% 20%, transparent 10% 100%);
+    background-repeat: repeat-x;
+    background-size: 0.5rem 1em;
+    background-position: left center;
+    display: block;
+    margin-right: 0.5rem;
+    width: 1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+dl > li {
+    margin-left: 2.5em;
+}
+
+dt {
+    margin-bottom: 0.4em;
+}
+
+dd {
+    margin-left: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-left: -2rem;
+    background-color: var(--primary);
+    color: var(--bg);
+}
+
+footer > a {
+    color: var(--bg);
+    text-decoration: underline;
+}
+
+footer > a:hover {
+    background-color: var(--accent);
+}
+
+.link-doc:after{
+    content: url("icons/file-pdf.svg");
+    padding-left: 0.2em;
+}

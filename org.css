@@ -1,0 +1,143 @@
+:root {
+    --primary:    #5317ac;
+    --secondary:  #f0f0ff;
+    --accent:     #8f0075;
+    --accent-alt: #189b6d;
+    --bg:         #fffffa;
+    --fg:         #332;
+    --bg-alt:     #f0f0f0;
+}
+
+@media screen and (prefers-color-scheme: dark){
+    :root {
+        --bg:         black;
+        --fg:         #fffffa;
+        --primary:    #b6a0ff;
+        --secondary:  #21008f;
+        --accent:     #6ae4b9;
+        --accent-alt: #fb11d1;
+        --bg-alt:     #333;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: medium;
+    line-height: 1.4;
+}
+
+body {
+    font-family: Fira Sans, sans-serif;
+    background-color: var(--bg);
+    color: var(--fg);
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 2em;
+    width: 100%;
+    height: 100vh;
+}
+a {
+    color: var(--primary);
+    text-decoration: none;
+    padding: 0.2em;
+}
+
+a:hover {
+    background: var(--secondary);
+    text-decoration: underline;
+    border-radius: 2px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    display: flex;
+    flex: 1;
+}
+
+h2:before {
+    content: '';
+    background: linear-gradient(90deg, var(--accent) 0% 20%, transparent 10% 100%);
+    background-repeat: repeat-x;
+    background-size: 0.5rem 1em;
+    background-position: left center;
+    display: block;
+    margin-right: 0.5rem;
+    width: 1rem;
+}
+
+.outline-text-3, .outline-text-4 {
+    padding-left: 2ch;
+}
+
+td {
+    padding: 1em;
+    text-align: center;
+}
+
+b {
+    color: var(--accent);
+}
+
+pre, code {
+    font-family: "JuliaMono", monospace;
+}
+
+pre {
+    position: relative;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--bg-alt);
+    padding: 1em;
+    margin: 1em 1em 1em 0;
+    overflow-x: scroll;
+}
+
+pre:before{
+    display: none;
+    position: absolute;
+    top: -0.5em;
+    right: 0.5em;
+    padding: 0.5em;
+    border: 2px solid var(--primary);
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+pre:hover:before {
+    display: inline;
+    margin-top: 1em;
+}
+
+pre .org-keyword {
+    color: var(--primary);
+}
+
+pre :is(.org-string, .org-operator, .org-type, .org-variable-name) {
+    color: var(--accent);
+}
+
+pre :is(.org-function, .org-function-name, .org-proof-tacticals-name) {
+    color: var(--accent-alt);
+}
+
+pre :is(.org-keyword, .org-type) {
+    font-weight: bold;
+}
+
+pre.src-agda2:hover:before {
+    content: "Agda";
+}
+
+pre.src-coq:hover:before {
+    content: "coq";
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
